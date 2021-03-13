@@ -1,0 +1,249 @@
+@font-face {
+  font-family: "poppin";
+  src: url(font/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  background-color: #17181a;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 50px;
+}
+
+nav img {
+  width: 30px;
+  height: 30px;
+  margin: auto 0;
+}
+nav ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: auto 0;
+}
+nav ul li {
+  color: rgb(200, 200, 200);
+  font-size: 0.8em;
+  font-family: poppin;
+}
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+    width: 80%;
+  }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+  * {
+    margin: 0;
+  }
+
+  .jumbotron img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @keyframes tengkorak {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  nav {
+    justify-content: space-around;
+    height: 45px;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+  }
+
+  nav ul {
+    left: 100%;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    width: 80%;
+    height: 600px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 80px 0 0 80px;
+    box-shadow: -1px 0px 6px rgb(2, 2, 2);
+    transition: cubic-bezier(1, -0.02, 0, 0.99) 0.8s;
+  }
+  .move {
+    transform: translateX(-360px);
+  }
+
+  nav ul li {
+    top: -100px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  #kotak1 {
+    position: absolute;
+    top: 110px;
+    left: 70px;
+    width: 55%;
+    height: 40%;
+    background-color: rgb(54, 54, 54);
+    box-shadow: 0 0 9px 5px black;
+  }
+
+  nav img {
+    position: relative;
+    left: 30px;
+    top: 10px;
+  }
+  .toggle {
+    position: fixed;
+    right: 30px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    top: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 4;
+  }
+  .toggle span {
+    width: 29px;
+    height: 5px;
+    background-color: white;
+    border-radius: 2px;
+    z-index: 3;
+  }
+  .toggle :nth-child(2) {
+    width: 20px;
+  }
+
+  .container {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+  }
+  #luar {
+    width: 16px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+  }
+
+  #dalam {
+    left: 2px;
+    top: 3px;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    animation: moin 1.5s infinite;
+  }
+
+  @keyframes moin {
+    0% {
+      top: 0px;
+    }
+
+    50% {
+      top: 20px;
+    }
+
+    100% {
+      top: 0px;
+    }
+  }
+}
+
+.about {
+  margin-top: 40px;
+  width: 100%;
+  height: 580px;
+  color: white;
+  display: flex;
+  position: relative;
+}
+
+#about {
+  padding: 25px;
+  overflow: hidden;
+}
+#about h2 {
+  text-align: center;
+}
+.pabout {
+  margin-top: 50px;
+  font-family: poppin;
+  font-size: 0.9em;
+  text-align: justify;
+  letter-spacing: 1px;
+  text-indent: 12px;
+  position: relative;
+  transition: 0.9s;
+  left: 120%;
+  z-index: -1;
+}
+.p-move {
+  left: -0px;
+}
+
+.kotakemail {
+  text-align: center;
+  position: absolute;
+  line-height: 29px;
+  width: 120px;
+  height: 30px;
+  background-color: rgb(255, 255, 71);
+  border-radius: 20px;
+  margin-top: 40px;
+  color: #17181a;
+  display: flex;
+}
+.kotakemail p {
+  position: relative;
+  left: 20%;
+}
+span img {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 2px;
+  left: 70%;
+}
+
+.project {
+  height: 450px;
+  color: white;
+}
